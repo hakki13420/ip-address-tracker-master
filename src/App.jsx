@@ -36,7 +36,7 @@ function App () {
         data && setGeoLocaData({
           ...geoLocaData,
           ip: data?.ip,
-          location: data?.location?.city + data?.location?.postalCode,
+          location: data?.location?.city + ', ' + data?.location?.postalCode,
           timeZone: data?.location?.timezone,
           isp: data?.isp,
           lat: data?.location?.lat,
