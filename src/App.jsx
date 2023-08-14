@@ -2,9 +2,13 @@ import { styled } from 'styled-components'
 import './App.css'
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import leaflet from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import Header from './components/Header'
 import axios from 'axios'
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png'
+import iconUrl from 'leaflet/dist/images/marker-icon.png'
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
 
 function App () {
   const [publicIp, setPublicIp] = useState('')
@@ -18,6 +22,16 @@ function App () {
     lat: 52.51,
     lng: 13.38
   })
+
+  useEffect(() => {
+    delete leaflet.Icon.Default.prototype._getIconUrl
+
+    leaflet.Icon.Default.mergeOptions({
+      iconRetinaUrl,
+      iconUrl,
+      shadowUrl
+    })
+  }, [])
 
   useEffect(() => {
     const getPublicIp = async () => {
