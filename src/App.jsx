@@ -6,9 +6,9 @@ import leaflet from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import Header from './components/Header'
 import axios from 'axios'
-import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png'
-import iconUrl from 'leaflet/dist/images/marker-icon.png'
-import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
+import iconRetinaUrl from './assets/images/marker-icon-2x.png'
+import iconUrl from './assets/images/marker-icon.png'
+import shadowUrl from './assets/images/marker-shadow.png'
 
 function App () {
   const [publicIp, setPublicIp] = useState('')
