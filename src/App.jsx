@@ -3,7 +3,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import leaflet from 'leaflet'
-import 'leaflet/dist/leaflet.css'
+
 import Header from './components/Header'
 import axios from 'axios'
 import iconRetinaUrl from './assets/images/marker-icon-2x.png'
