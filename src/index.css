@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Rubik, Helvetica, sans-serif
+}
+
+:root{
+    --VeryDarkGray: hsl(0, 0%, 17%);
+    --DarkGray: hsl(0, 0%, 59%);
+}
+
+#root{
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+    
+}
